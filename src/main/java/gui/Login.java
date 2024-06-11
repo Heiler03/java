@@ -20,14 +20,18 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         bg = new javax.swing.JPanel();
+        label_sesion = new javax.swing.JLabel();
+        btnext = new javax.swing.JButton();
+        userlabel = new javax.swing.JPanel();
         label_usuario = new javax.swing.JLabel();
         caja_usuario = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
+        contralabel = new javax.swing.JPanel();
         label_contraseña = new javax.swing.JLabel();
         caja_usuario1 = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
-        label_sesion = new javax.swing.JLabel();
-        btnext = new javax.swing.JButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
         labelbg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -35,11 +39,24 @@ public class Login extends javax.swing.JFrame {
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        label_sesion.setBackground(new java.awt.Color(255, 255, 255));
+        label_sesion.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        label_sesion.setForeground(new java.awt.Color(0, 0, 0));
+        label_sesion.setText("INICIO DE SESIÓN");
+        bg.add(label_sesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 207, 30));
+
+        btnext.setBackground(new java.awt.Color(255, 145, 76));
+        btnext.setIcon(new javax.swing.ImageIcon("C:\\Users\\HeilerGa\\Documents\\NetBeansProjects\\horario\\src\\main\\java\\resources\\forwad.png")); // NOI18N
+        btnext.setText("Next");
+        btnext.setBorder(null);
+        bg.add(btnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 460, -1, -1));
+
+        userlabel.setBackground(new java.awt.Color(255, 145, 76));
+
         label_usuario.setBackground(new java.awt.Color(255, 255, 255));
         label_usuario.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         label_usuario.setForeground(new java.awt.Color(0, 0, 0));
         label_usuario.setText("Usuario");
-        bg.add(label_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, 90, 30));
 
         caja_usuario.setBackground(new java.awt.Color(255, 145, 76));
         caja_usuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -51,17 +68,45 @@ public class Login extends javax.swing.JFrame {
                 caja_usuarioActionPerformed(evt);
             }
         });
-        bg.add(caja_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 200, 20));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 320, -1));
+
+        javax.swing.GroupLayout userlabelLayout = new javax.swing.GroupLayout(userlabel);
+        userlabel.setLayout(userlabelLayout);
+        userlabelLayout.setHorizontalGroup(
+            userlabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userlabelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(userlabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(caja_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userlabelLayout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        userlabelLayout.setVerticalGroup(
+            userlabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userlabelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(caja_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
+        );
+
+        bg.add(userlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 350, -1));
+
+        contralabel.setBackground(new java.awt.Color(255, 145, 76));
 
         label_contraseña.setBackground(new java.awt.Color(255, 255, 255));
         label_contraseña.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         label_contraseña.setForeground(new java.awt.Color(0, 0, 0));
         label_contraseña.setText("Contraseña");
-        bg.add(label_contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 140, 30));
 
         caja_usuario1.setBackground(new java.awt.Color(255, 145, 76));
         caja_usuario1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -73,23 +118,60 @@ public class Login extends javax.swing.JFrame {
                 caja_usuario1ActionPerformed(evt);
             }
         });
-        bg.add(caja_usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 210, -1));
 
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 320, -1));
 
-        label_sesion.setBackground(new java.awt.Color(255, 255, 255));
-        label_sesion.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        label_sesion.setForeground(new java.awt.Color(0, 0, 0));
-        label_sesion.setText("INICIO DE SESIÓN");
-        bg.add(label_sesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 207, 30));
+        javax.swing.GroupLayout contralabelLayout = new javax.swing.GroupLayout(contralabel);
+        contralabel.setLayout(contralabelLayout);
+        contralabelLayout.setHorizontalGroup(
+            contralabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contralabelLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(contralabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(caja_usuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contralabelLayout.createSequentialGroup()
+                .addContainerGap(24, Short.MAX_VALUE)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        contralabelLayout.setVerticalGroup(
+            contralabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contralabelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(caja_usuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
 
-        btnext.setBackground(new java.awt.Color(255, 145, 76));
-        btnext.setIcon(new javax.swing.ImageIcon("C:\\Users\\HeilerGa\\Documents\\NetBeansProjects\\horario\\src\\main\\java\\resources\\forwad.png")); // NOI18N
-        btnext.setText("Next");
-        btnext.setBorder(null);
-        bg.add(btnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 460, -1, -1));
+        bg.add(contralabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 350, 100));
+
+        jCheckBox1.setBackground(new java.awt.Color(255, 145, 76));
+        jCheckBox1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(0, 0, 0));
+        jCheckBox1.setText("Consulta");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        bg.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 300, -1, -1));
+
+        jCheckBox2.setBackground(new java.awt.Color(255, 145, 76));
+        jCheckBox2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jCheckBox2.setForeground(new java.awt.Color(0, 0, 0));
+        jCheckBox2.setText("Sesion");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+        bg.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, 80, -1));
 
         labelbg.setIcon(new javax.swing.ImageIcon("C:\\Users\\HeilerGa\\Documents\\NetBeansProjects\\horario\\src\\main\\java\\resources\\background-sesion.jpeg")); // NOI18N
         labelbg.setText("jLabel1");
@@ -117,6 +199,14 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_caja_usuario1ActionPerformed
 
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -127,11 +217,15 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnext;
     private javax.swing.JTextField caja_usuario;
     private javax.swing.JTextField caja_usuario1;
+    private javax.swing.JPanel contralabel;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel label_contraseña;
     private javax.swing.JLabel label_sesion;
     private javax.swing.JLabel label_usuario;
     private javax.swing.JLabel labelbg;
+    private javax.swing.JPanel userlabel;
     // End of variables declaration//GEN-END:variables
 }
