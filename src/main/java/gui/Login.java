@@ -8,11 +8,8 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
-        contrapanel.setVisible(false);
-        btnConsulta.setSelected(true);
-        
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -22,20 +19,19 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btngroupS = new javax.swing.ButtonGroup();
         bg = new javax.swing.JPanel();
         label_sesion = new javax.swing.JLabel();
         btnext = new javax.swing.JButton();
-        userpanel = new javax.swing.JPanel();
+        userlabel = new javax.swing.JPanel();
         label_usuario = new javax.swing.JLabel();
         caja_usuario = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        contrapanel = new javax.swing.JPanel();
+        contralabel = new javax.swing.JPanel();
         label_contraseña = new javax.swing.JLabel();
         caja_usuario1 = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
-        btnConsulta = new javax.swing.JRadioButton();
-        btnSesion = new javax.swing.JRadioButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
         labelbg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,14 +49,9 @@ public class Login extends javax.swing.JFrame {
         btnext.setIcon(new javax.swing.ImageIcon("C:\\Users\\HeilerGa\\Documents\\NetBeansProjects\\horario\\src\\main\\java\\resources\\forwad.png")); // NOI18N
         btnext.setText("Next");
         btnext.setBorder(null);
-        btnext.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnextActionPerformed(evt);
-            }
-        });
         bg.add(btnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 460, -1, -1));
 
-        userpanel.setBackground(new java.awt.Color(255, 145, 76));
+        userlabel.setBackground(new java.awt.Color(255, 145, 76));
 
         label_usuario.setBackground(new java.awt.Color(255, 255, 255));
         label_usuario.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
@@ -70,7 +61,7 @@ public class Login extends javax.swing.JFrame {
         caja_usuario.setBackground(new java.awt.Color(255, 145, 76));
         caja_usuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         caja_usuario.setForeground(new java.awt.Color(102, 102, 102));
-        caja_usuario.setText("Ingrese su numero de cedula");
+        caja_usuario.setText("Ingrese su nombre de usuario");
         caja_usuario.setBorder(null);
         caja_usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,24 +72,24 @@ public class Login extends javax.swing.JFrame {
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        javax.swing.GroupLayout userpanelLayout = new javax.swing.GroupLayout(userpanel);
-        userpanel.setLayout(userpanelLayout);
-        userpanelLayout.setHorizontalGroup(
-            userpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userpanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout userlabelLayout = new javax.swing.GroupLayout(userlabel);
+        userlabel.setLayout(userlabelLayout);
+        userlabelLayout.setHorizontalGroup(
+            userlabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userlabelLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addGroup(userpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(userlabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(caja_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userpanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userlabelLayout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        userpanelLayout.setVerticalGroup(
-            userpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userpanelLayout.createSequentialGroup()
+        userlabelLayout.setVerticalGroup(
+            userlabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userlabelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(label_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -108,9 +99,9 @@ public class Login extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        bg.add(userpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 350, -1));
+        bg.add(userlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 350, -1));
 
-        contrapanel.setBackground(new java.awt.Color(255, 145, 76));
+        contralabel.setBackground(new java.awt.Color(255, 145, 76));
 
         label_contraseña.setBackground(new java.awt.Color(255, 255, 255));
         label_contraseña.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
@@ -131,24 +122,24 @@ public class Login extends javax.swing.JFrame {
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
-        javax.swing.GroupLayout contrapanelLayout = new javax.swing.GroupLayout(contrapanel);
-        contrapanel.setLayout(contrapanelLayout);
-        contrapanelLayout.setHorizontalGroup(
-            contrapanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contrapanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout contralabelLayout = new javax.swing.GroupLayout(contralabel);
+        contralabel.setLayout(contralabelLayout);
+        contralabelLayout.setHorizontalGroup(
+            contralabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contralabelLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addGroup(contrapanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(contralabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(caja_usuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contrapanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contralabelLayout.createSequentialGroup()
                 .addContainerGap(24, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        contrapanelLayout.setVerticalGroup(
-            contrapanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contrapanelLayout.createSequentialGroup()
+        contralabelLayout.setVerticalGroup(
+            contralabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contralabelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(label_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -158,31 +149,29 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        bg.add(contrapanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 350, 100));
+        bg.add(contralabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 350, 100));
 
-        btnConsulta.setBackground(new java.awt.Color(255, 145, 76));
-        btngroupS.add(btnConsulta);
-        btnConsulta.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnConsulta.setForeground(new java.awt.Color(0, 0, 0));
-        btnConsulta.setText("Consulta");
-        btnConsulta.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox1.setBackground(new java.awt.Color(255, 145, 76));
+        jCheckBox1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(0, 0, 0));
+        jCheckBox1.setText("Consulta");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConsultaActionPerformed(evt);
+                jCheckBox1ActionPerformed(evt);
             }
         });
-        bg.add(btnConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 300, -1, -1));
+        bg.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 300, -1, -1));
 
-        btnSesion.setBackground(new java.awt.Color(255, 145, 76));
-        btngroupS.add(btnSesion);
-        btnSesion.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnSesion.setForeground(new java.awt.Color(0, 0, 0));
-        btnSesion.setText("Sesion");
-        btnSesion.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox2.setBackground(new java.awt.Color(255, 145, 76));
+        jCheckBox2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jCheckBox2.setForeground(new java.awt.Color(0, 0, 0));
+        jCheckBox2.setText("Sesion");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSesionActionPerformed(evt);
+                jCheckBox2ActionPerformed(evt);
             }
         });
-        bg.add(btnSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 80, 40));
+        bg.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, 80, -1));
 
         labelbg.setIcon(new javax.swing.ImageIcon("C:\\Users\\HeilerGa\\Documents\\NetBeansProjects\\horario\\src\\main\\java\\resources\\background-sesion.jpeg")); // NOI18N
         labelbg.setText("jLabel1");
@@ -210,28 +199,13 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_caja_usuario1ActionPerformed
 
-    private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
-        
-        
-            contrapanel.setVisible(false);
-     
-    }//GEN-LAST:event_btnConsultaActionPerformed
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-    private void btnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSesionActionPerformed
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
-        
-        contrapanel.setVisible(!contrapanel.isVisible());
-            
-    
-    }//GEN-LAST:event_btnSesionActionPerformed
-
-    private void btnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnextActionPerformed
-        // TODO add your handling code here:
-        Admin admin = new Admin();
-        admin.setVisible(true);
-               
-    }//GEN-LAST:event_btnextActionPerformed
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,19 +214,18 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JRadioButton btnConsulta;
-    private javax.swing.JRadioButton btnSesion;
     private javax.swing.JButton btnext;
-    private javax.swing.ButtonGroup btngroupS;
     private javax.swing.JTextField caja_usuario;
     private javax.swing.JTextField caja_usuario1;
-    private javax.swing.JPanel contrapanel;
+    private javax.swing.JPanel contralabel;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel label_contraseña;
     private javax.swing.JLabel label_sesion;
     private javax.swing.JLabel label_usuario;
     private javax.swing.JLabel labelbg;
-    private javax.swing.JPanel userpanel;
+    private javax.swing.JPanel userlabel;
     // End of variables declaration//GEN-END:variables
 }

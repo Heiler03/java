@@ -1,12 +1,12 @@
 package gui;
 
 
-public class supuestologin extends javax.swing.JFrame {
+public class Maestrosview extends javax.swing.JFrame {
 
     /**
      * Creates new form login
      */
-    public supuestologin() {
+    public Maestrosview() {
         initComponents();
     }
 
