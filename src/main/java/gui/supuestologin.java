@@ -1,12 +1,12 @@
 package gui;
 
 
-public class Maestrosview extends javax.swing.JFrame {
+public class supuestologin extends javax.swing.JFrame {
 
     /**
      * Creates new form login
      */
-    public Maestrosview() {
+    public supuestologin() {
         initComponents();
     }
 
@@ -82,7 +82,7 @@ public class Maestrosview extends javax.swing.JFrame {
         label_sesion.setBackground(new java.awt.Color(255, 255, 255));
         label_sesion.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         label_sesion.setForeground(new java.awt.Color(0, 0, 0));
-        label_sesion.setText("Maestros view");
+        label_sesion.setText("INICIO DE SESIÓN");
         bg.add(label_sesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 207, 30));
 
         btnext.setBackground(new java.awt.Color(255, 145, 76));
